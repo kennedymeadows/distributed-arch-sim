@@ -5,7 +5,7 @@ use tokio::time::{sleep, Duration};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
-    let semaphore = Arc::new(Semaphore::new(500)); // Limit to 50 concurrent requests
+    let semaphore = Arc::new(Semaphore::new(500));
     let mut handles = vec![];
 
     for i in 1..=10000 { // Adjust the range for the number of requests you want to send
